@@ -75,8 +75,6 @@ primeiros passos
 
 
 
-
-12 de Março de 2017</span>
                 </div>
             </div>
         </div>
@@ -97,8 +95,8 @@ Veremos os comandos mais usados para se trabalhar com Git. Vou assumir que você
 
 <p>O controle de versão controla quem faz as alterações num projeto. Então você deve configurar seu usuário:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"Bruno.Orlandi"</span>
-git config <span class="nt">--global</span> user.email <span class="s2">"meu.email@gmail.com"</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span 
+git config <span class="nt">--global</span> user.email <span class="s2">"Seu_meu.email@gmail.com"</span>
 </code></pre></div></div>
 
 <p>Substitua com seu Usuário e E-mail da sua conta no GitHub.</p>
