@@ -10,32 +10,7 @@ primeiros passos
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             
                 
-                    
-                   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                             
 
 
                
@@ -148,4 +123,4 @@ Ao final da tela de edição você deverá preencher uma mensagem de commit. Sim
 </code></pre></div></div>
 <p>Você verá que seu repositório local foi atualizado com o novo commit.</p>
 
-body></html>
+</html>
