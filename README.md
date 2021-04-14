@@ -102,8 +102,7 @@ Após criado, o repositório já exibirá os comandos necessários para iniciar 
 Como já criamos o repositório localmente e queremos subí-lo no GitHub seguiremos com a opção <em>“push an existing repository from the command line”</em>.
 Primeiro devemos configurar qual o repositório remoto. Execute usando a URL do seu repositório:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin <a class="vglnk" href="" rel="nofollow"><span>https</span><span>://</span><span>github</span><span>.</span><span>com</span><span>/</span><span>BrOrlandi</span><span>/</span><span>Tutorial</span><span>.</span><span>git</span></a>
-</code></pre></div></div>
+
 <p>Com isso você configurou o remote <code class="highlighter-rouge">origin</code> para o GitHub. Você já pode subir seus commits para lá usando <code class="highlighter-rouge">git push</code>, mas na primeira vez o comando deve ser executado para configurar a branch <code class="highlighter-rouge">master</code> para o GitHub. Opa, logo falarei sobre branchs em outro post. Ao executar o comando será solicitado o usuário e senha para autenticar no GitHub.</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push <span class="nt">-u</span> origin master
