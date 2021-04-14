@@ -1,0 +1,471 @@
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Este rápido tutorial é pra você que já tem um conhecimento básico sobre ferramentas de controle de versão ou precisa de um guia rápido para Git com linha de comando.">
+
+    
+  
+    
+
+
+    <title>
+            Git, primeiros passos - Bruno Orlandi
+        </title>
+
+    <link rel="icon" href="/img/favicon2.png" type="image/png">
+
+    <link rel="canonical" href="https://brorlandi.github.io/2017/03/12/Git-primeiros-passos/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link type="application/atom+xml" rel="alternate" href="https://brorlandi.github.io/feed.xml" title="Bruno Orlandi" />
+
+    <meta name="theme-color" content="#0057a1">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!--Facebook OG-->
+    
+    <meta property="fb:app_id" content="175429786274303">
+    <meta property="og:url" content="https://brorlandi.github.io/2017/03/12/Git-primeiros-passos/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="
+            Git, primeiros passos - Bruno Orlandi
+        ">
+    <meta property="og:image" content="https://brorlandi.github.io/img/git_start/header.png">
+    <meta property="og:description" content="Este rápido tutorial é pra você que já tem um conhecimento básico sobre ferramentas de controle de versão ou precisa de um guia rápido para Git com linha de comando.">
+    <meta property="og:site_name" content="Bruno Orlandi">
+    <meta property="og:locale" content="pt_BR">
+
+    <!--Twitter-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@brorlandi">
+    <meta name="twitter:url" content="https://brorlandi.github.io/2017/03/12/Git-primeiros-passos/">
+    <meta name="twitter:title" content="
+            Git, primeiros passos - Bruno Orlandi
+        ">
+    <meta name="twitter:description" content="Este rápido tutorial é pra você que já tem um conhecimento básico sobre ferramentas de controle de versão ou precisa de um guia rápido para Git com linha de comando.">
+    <meta name="twitter:image" content="https://brorlandi.github.io/img/git_start/header.png">
+
+    <!--Gplus-->
+    <link href="https://plus.google.com/+BrunoOrlandi1" rel="publisher">
+    <meta itemprop="name" content="
+            Git, primeiros passos - Bruno Orlandi
+        ">
+    <meta itemprop="description" content="Este rápido tutorial é pra você que já tem um conhecimento básico sobre ferramentas de controle de versão ou precisa de um guia rápido para Git com linha de comando.">
+    <meta itemprop="image" content="https://brorlandi.github.io/img/git_start/header.png">
+
+    <!-- jQuery -->
+    <script src="/js/jquery.min.js "></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js "></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/clean-blog.min.js "></script>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Bruno Orlandi</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+				
+                
+				
+                <li>
+                    <a href="/about/">Sobre</a>
+                </li>
+				
+                
+				
+                
+				
+                <li>
+                    <a href="/contact/">Contato</a>
+                </li>
+				
+                
+				
+                <li>
+                    <a href="/projects/">Projetos</a>
+                </li>
+				
+                
+                <li class="dropdown navdrop">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                
+                    <li><a href="/categories#git">Git</a></li>
+                
+                    <li><a href="/categories#histórias">Histórias</a></li>
+                
+                    <li><a href="/categories#inovação">Inovação</a></li>
+                
+                </ul>
+                </li>
+                <li>
+                    <a href="https://github.com/BrOrlandi">Github</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/git_start/header.png'); ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            
+                <div class="post-heading">
+            
+                    <h1>Git, primeiros passos</h1>
+                    
+                    <h2 class="subheading">Começando com Git em linha de comando.</h2>
+                    
+                    <span class="meta">Por Bruno Orlandi em 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12 de Março de 2017</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<p>Este rápido tutorial é pra você que já tem um conhecimento básico sobre ferramentas de controle de versão ou precisa de um guia rápido para Git com linha de comando.
+Também pode ser muito útil se você está apenas acostumado a usar outras ferramentas de desenvolvimento com Git e não sabe os comandos que são executados por trás dela. Aprenda os comandos e não ficará dependente de nenhum outro software.
+Veremos os comandos mais usados para se trabalhar com Git. Vou assumir que você já possui cadastro no <a href="https://github.com/">GitHub</a> e já tem Git instalado em seu computador.</p>
+
+<h2 id="configure-seu-usuário">Configure seu Usuário</h2>
+
+<p>O controle de versão controla quem faz as alterações num projeto. Então você deve configurar seu usuário:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"Bruno.Orlandi"</span>
+git config <span class="nt">--global</span> user.email <span class="s2">"meu.email@gmail.com"</span>
+</code></pre></div></div>
+
+<p>Substitua com seu Usuário e E-mail da sua conta no GitHub.</p>
+
+<h2 id="crie-um-repositório">Crie um Repositório</h2>
+
+<p>O repositório é onde estarão os arquivos versionados, no servidor Git e no seu computador em uma pasta.
+Crie uma pasta, já com o nome do seu repositório e execute o comando dentro dela:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div></div>
+<p>No meu exemplo a pasta se chama <strong>Tutorial</strong></p>
+
+<h2 id="crie-o-commit">Crie o Commit</h2>
+
+<p>Um Commit é um pacote de alterações feitas no repositório. Cada commit possui arquivos alterados, autor e uma mensagem de resumo.</p>
+
+<p>Vamos criar o primeiro commit criando um arquivo especial para o GitHub chamado <strong>README.md</strong>. Dentro deste arquivo escreva:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">Meu repositório Git
+====================
+</span>
+Apenas repositório Git
+
+</code></pre></div></div>
+
+<p>Salve o arquivo e agora você irá usar o comando mais usado em Git:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
+
+<p>O resultado deve ser:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On branch master
+
+Initial commit
+
+Untracked files:
+  <span class="o">(</span>use <span class="s2">"git add &lt;file&gt;..."</span> to include <span class="k">in </span>what will be committed<span class="o">)</span>
+
+        README.md
+
+nothing added to commit but untracked files present <span class="o">(</span>use <span class="s2">"git add"</span> to track<span class="o">)</span>
+</code></pre></div></div>
+
+<p>O comando <code class="highlighter-rouge">git status</code> sempre vai retornar o estado atual do repositório e explicar o que você pode fazer em seguida. 
+Neste caso não há commits criados ainda então você pode criar o primeiro com o arquivo <code class="highlighter-rouge">README.md</code>.
+Devemos primeiro adicionar o arquivo a um commit com o comando:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add README.md
+</code></pre></div></div>
+
+<p>Agora o arquivo está pronto para ser empacotado em um commit.
+Escreva o comando de commit incluindo uma mensagem que explique o que sua alteração faz no repositório.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s2">"Adiciona arquivo README.md"</span>
+</code></pre></div></div>
+
+<p>Pronto, você fez o primeiro commit. Pode listar os commits mais recentes com o comando:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log
+</code></pre></div></div>
+
+<h2 id="suba-seus-commits">Suba seus Commits</h2>
+
+<p>Agora você precisa sincronizar o seu repositório com o GitHub, mas ainda não fizemos nenhuma conexão entre eles.
+Acesse seu GitHub e na página inicial você encontrará o botão <img src="/img/git_start/newrepo.png" class="inline" width="130px" /></p>
+
+<p>Crie o repositório com o nome que desejar, neste exemplo vou usar <strong>Tutorial</strong>.
+Após criado, o repositório já exibirá os comandos necessários para iniciar e configurar o seu repositório localmente.
+Como já criamos o repositório localmente e queremos subí-lo no GitHub seguiremos com a opção <em>“push an existing repository from the command line”</em>.
+Primeiro devemos configurar qual o repositório remoto. Execute usando a URL do seu repositório:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin https://github.com/BrOrlandi/Tutorial.git
+</code></pre></div></div>
+<p>Com isso você configurou o remote <code class="highlighter-rouge">origin</code> para o GitHub. Você já pode subir seus commits para lá usando <code class="highlighter-rouge">git push</code>, mas na primeira vez o comando deve ser executado para configurar a branch <code class="highlighter-rouge">master</code> para o GitHub. Opa, logo falarei sobre branchs em outro post. Ao executar o comando será solicitado o usuário e senha para autenticar no GitHub.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push <span class="nt">-u</span> origin master
+</code></pre></div></div>
+
+<p>Olhe o repositório no GitHub e verá seu arquivo <strong>README.md</strong> lá e exibido na página inicial do repositório.
+Pronto, você aprendeu os principais comandos para se trabalhar com Git. Git é uma ótima ferramenta para se trabalhar em equipe também mas apenas estes comandos não são suficientes.</p>
+
+<h2 id="sincronize-o-repositório">Sincronize o repositório</h2>
+
+<p>Você pode editar os arquivos de texto direto no GitHub. Vamos editar o README.md lá, clique nele e sem seguida clique no botão de editar <i class="fa fa-pencil"></i>.
+Ao final da tela de edição você deverá preencher uma mensagem de commit. Sim, você está fazendo um commit direto pelo GitHub.</p>
+
+<p>Agora o repositório possui dois commits no GitHub e no seu computador apenas um. Para sincronizar o seu repositório você deve puxar as atualizações.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull
+</code></pre></div></div>
+<p>Você verá que seu repositório local foi atualizado com o novo commit.</p>
+
+<h2 id="baixe-outros-repositórios">Baixe outros repositórios</h2>
+
+<p>Você pode querer baixar um repositório Git no seu computador e começar a commitar nele. Para isso existe o <code class="highlighter-rouge">git clone</code> que basicamente faz o download do repositório, seus arquivos, commits e configuração de remotes. Você pode clonar qualquer repositório público no GitHub e outros servidores Git. Você precisa da URL Git desses repositórios, você pode obtê-la no botão <img src="/img/git_start/clone.png" class="inline" width="170px" /></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/BrOrlandi/Tutorial.git
+</code></pre></div></div>
+
+<p>O comando irá criar a pasta <strong>Tutorial</strong> com o repositório.</p>
+
+<h2 id="continue-aprendendo">Continue aprendendo…</h2>
+
+<p>Ainda farei outros posts sobre Branchs e Forks com Git. 
+Assim dando mais um passo ao trabalho colaborativo com Git.</p>
+
+<p>Sabia que eu tenho um curso online gratuito sobre Git e GitHub na Udemy? Acesse meu curso <a href="https://brorlandi.github.io/curso-git/">aqui</a> e saiba mais sobre ele.</p>
+
+<p><!-- See more in this category --></p>
+<h2>Veja mais</h2>
+<ul>
+    
+    
+        <li>
+        <h3>
+        
+        <a href="/git-desfazendo-commits">
+        Git, desfazendo commits
+        <small>15 Apr 2017</small>
+        </a>
+
+        </h3>
+        </li>
+    
+    
+    
+    
+</ul>
+
+                
+    <div class="share-page">
+        <a class="tw" href="https://twitter.com/intent/tweet?text=Git, primeiros passos&url=https://brorlandi.github.io/2017/03/12/Git-primeiros-passos/&via=BrOrlandi&related=BrOrlandi" rel="nofollow" target="_blank" title="Compartilhe no Twitter"><i class="fa fa-twitter"></i> Tweet</a>
+        <a class="fb" href="https://www.facebook.com/sharer.php?u=https://brorlandi.github.io/2017/03/12/Git-primeiros-passos/" rel="nofollow" target="_blank" title="Compartilhe no Facebook"><i class="fa fa-facebook"></i> Compartilhar</a>
+    </div>
+
+                <hr>
+<!--
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/git-desfazendo-commits" data-toggle="tooltip" data-placement="top" title="Git, desfazendo commits">Próximo post &rarr;</a>
+                    </li>
+                    
+                </ul>
+-->
+                <div style="margin-top: 15px;">
+                    
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "https://brorlandi.github.io/2017/03/12/Git-primeiros-passos/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/2017/03/12/Git primeiros passos"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//brorlandi.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</article>
+
+<hr>
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                       
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Bruno Orlandi 2018</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    $(function(){
+        var language = navigator.language || navigator.userLanguage;
+        console.log(language);
+    });
+</script>
+
+
+    
+<script>
+
+</script>
+
+
+
+</body>
+
+</html>
