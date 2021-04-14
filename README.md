@@ -3,50 +3,13 @@ primeiros passos
 <html lang="pt-br">
   <head>
 
-     um conhecimento básico sobre ferramentas de controle de versão ou precisa de um guia rápido para Git com linha de comando.">
-
-    
-  
-    
-
-
-    <title>
-            Git 
-        </title>
-
-    
-
-    
-				
-                
-				
-                
-				
-                <li>
-                    <a href="/contact/">Contato</a>
-                </li>
-				
-                
-				
-                <li>
-                    <a href="/projects/">Projetos</a>
-                </li>
-				
-                
-                
-
-
-    <!-- Post Header -->
+     
 <header class="intro-header" style="background-image: url('/img/git_start/header.png'); ">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             
-                <div class="post-heading">
-            
-                    <h1>Git, primeiros passos</h1>
-                    
-                    <h2 class="subheading">Começando com Git em linha de comando.</h2>
+                
                     
                    
 
@@ -75,17 +38,11 @@ primeiros passos
 
 
 
-                </div>
-            </div>
-        </div>
-    </div>
+               
 </header>
 
 <!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
 
 				<p>Este rápido tutorial é pra você que já tem um conhecimento básico sobre ferramentas de controle de versão ou precisa de um guia rápido para Git com linha de comando.
 Também pode ser muito útil se você está apenas acostumado a usar outras ferramentas de desenvolvimento com Git e não sabe os comandos que são executados por trás dela. Aprenda os comandos e não ficará dependente de nenhum outro software.
